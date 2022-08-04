@@ -15,7 +15,9 @@ public class Tests {
 
     public WebDriver driver;
     String url = "https://lambdatest.github.io/sample-todo-app/";
-    String node = "http://10.0.0.52:4444";
+//    String node = "http://10.0.0.52:4444";
+//    String node = "http://10.255.5.126:4444";
+    String node = "http://10.1.74.4:4444/";
     boolean status = false;
 
     @BeforeClass
