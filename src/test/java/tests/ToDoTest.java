@@ -10,12 +10,13 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
-public class Tests {
+public class ToDoTest {
 
     public WebDriver driver;
     String url = "https://lambdatest.github.io/sample-todo-app/";
-    String node = "http://10.0.0.52:4444";
+    String node = "http://192.168.56.1:4444";
     boolean status = false;
 
     @BeforeClass
@@ -31,14 +32,27 @@ public class Tests {
     public void test_ToDo_App() throws InterruptedException {
         driver.navigate().to(url);
         driver.manage().window().maximize();
+
+        TimeUnit.SECONDS.sleep(2);
+
         try {
             /* Mark done first two items in the list */
             driver.findElement(By.name("li1")).click();
+
+            TimeUnit.SECONDS.sleep(2);
+
             driver.findElement(By.name("li2")).click();
+
+            TimeUnit.SECONDS.sleep(2);
 
             /* Add an item to the list */
             driver.findElement(By.id("sampletodotext")).sendKeys("Yay, let's add it to the list");
+
+            TimeUnit.SECONDS.sleep(2);
+
             driver.findElement(By.id("addbutton")).click();
+
+            TimeUnit.SECONDS.sleep(2);
 
             /* Check that the items selected are added to list */
             String enteredText = driver.findElement(By.xpath("/html/body/div/div/div/ul/li[6]/span")).getText();
