@@ -18,6 +18,8 @@ public class Tests {
 //    String node = "http://10.0.0.52:4444";
 //    String node = "http://10.255.5.126:4444";
     String node = "http://10.1.74.4:4444/";
+
+    String str = "https://dzone.com/articles/selenium-grid-4-tutorial-for-distributed-testing";
     boolean status = false;
 
     @BeforeClass
