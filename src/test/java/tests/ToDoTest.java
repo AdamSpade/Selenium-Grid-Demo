@@ -16,18 +16,20 @@ public class ToDoTest {
 
     public WebDriver driver;
     String url = "https://lambdatest.github.io/sample-todo-app/";
-    String node = "http://192.168.56.1:4444";
+//    String node = "http://192.168.56.1:4444";
+    String node = "http://localhost:4444";
 //    String node = "http://10.0.0.52:4444";
 //    String node = "http://10.255.5.126:4444";
 //    String node = "http://10.1.74.4:4444/";
 
-    String str = "https://dzone.com/articles/selenium-grid-4-tutorial-for-distributed-testing";
+//    String str = "https://dzone.com/articles/selenium-grid-4-tutorial-for-distributed-testing";
     boolean status = false;
 
     @BeforeClass
     public void testSetUp() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
+//        caps.setBrowserName("internet explorer");
 
         /* The execution happens on the Selenium Grid with the address mentioned earlier */
         driver = new RemoteWebDriver(new URL(node), caps);
