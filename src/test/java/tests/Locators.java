@@ -59,6 +59,17 @@ public class Locators {
                     TimeUnit.SECONDS.sleep(1);
                 }
 
+                driver.findElement(By.cssSelector("#inputUsername")).sendKeys("Adam");
+                driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+                driver.findElement(By.id("chkboxOne")).click();
+                driver.findElement(By.id("chkboxTwo")).click();
+                TimeUnit.SECONDS.sleep(1);
+
+                driver.findElement(By.xpath("//button[@class='submit signInBtn']")).click();
+                TimeUnit.SECONDS.sleep(1);
+
+                driver.findElement(By.className("logout-btn")).click();
+
             }
             TimeUnit.SECONDS.sleep(2);
             driver.quit();
